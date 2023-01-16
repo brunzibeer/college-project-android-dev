@@ -1,0 +1,17 @@
+<resources>
+
+    <string name="app_name">Chrono Training Tracker</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="add_athlete">Add New Athlete</string>
+
+    <string name="submit_athlete">SUBMIT</string>
+
+    <string-array name="distance_unit">
+        <item>Km</item>
+        <item>m</item>
+    </string-array>
+
+</resources>

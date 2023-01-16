@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/aldrich"
+            android:text="Welcome to Chrono Training Tracker!"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            app:srcCompat="@drawable/img_nav" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="214dp"
+            android:layout_height="59dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/aldrich"
+            android:text="Tap on this to open the navigation drawer"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/imgMenu"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <ImageView
+            android:id="@+id/imgOptions"
+            android:layout_width="199dp"
+            android:layout_height="171dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgMenu"
+            app:srcCompat="@drawable/img_menu" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="147dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="33dp"
+            android:fontFamily="@font/aldrich"
+            android:text="These are the main tabs of the app"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/imgOptions"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <ImageView
+            android:id="@+id/imgAthlete"
+            android:layout_width="99dp"
+            android:layout_height="93dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgOptions"
+            app:srcCompat="@drawable/img_add" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="209dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/aldrich"
+            android:text="Tap on this button to add an Athlete to the list"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/imgAthlete"
+            app:layout_constraintTop_toBottomOf="@+id/imgOptions" />
+
+        <ImageView
+            android:id="@+id/imgRefresh"
+            android:layout_width="93dp"
+            android:layout_height="94dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgAthlete"
+            app:srcCompat="@drawable/img_refresh" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="247dp"
+            android:layout_height="86dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="45dp"
+            android:fontFamily="@font/aldrich"
+            android:text="Tap on this button to refresh the list you are currently viewing"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/imgRefresh"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <ImageView
+            android:id="@+id/imgTrain"
+            android:layout_width="94dp"
+            android:layout_height="93dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgRefresh"
+            app:srcCompat="@drawable/img_train" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="244dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/aldrich"
+            android:text="Tap on this button to start a training session with for the selected athlete"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/imgTrain"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+        <ImageView
+            android:id="@+id/imgSession"
+            android:layout_width="179dp"
+            android:layout_height="214dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgTrain"
+            app:srcCompat="@drawable/img_session" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="173dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="43dp"
+            android:fontFamily="@font/aldrich"
+            android:text="Tap on any given session to show a detailed view"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/imgSession"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

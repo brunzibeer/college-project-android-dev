@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChronometerActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarChrono"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/design_default_color_primary_dark"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/Theme.AppCompat.Light"
+        app:title="Training Tracking" />
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="281dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="128dp"
+        android:fontFamily="@font/aldrich"
+        android:gravity="center"
+        android:textSize="70sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarChrono" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/startStop"
+        style="@style/Widget.MaterialComponents.FloatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="177dp"
+        android:layout_marginTop="192dp"
+        android:backgroundTint="@color/design_default_color_primary"
+        android:elevation="4dp"
+        android:onClick="startTime"
+        android:scaleType="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chronometer"
+        app:srcCompat="@drawable/ic_start" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/lap"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="195dp"
+        android:clickable="false"
+        android:onClick="setLapSave"
+        android:text="Lap"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/startStop"
+        app:layout_constraintTop_toBottomOf="@+id/chronometer"
+        app:rippleColor="@color/design_default_color_primary"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/reset"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="195dp"
+        android:layout_marginEnd="60dp"
+        android:clickable="false"
+        android:onClick="resetTime"
+        android:text="reset"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/startStop"
+        app:layout_constraintTop_toBottomOf="@+id/chronometer"
+        app:rippleColor="@color/design_default_color_primary"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

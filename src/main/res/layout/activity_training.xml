@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrainingActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/trainingToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/design_default_color_primary_dark"
+        android:elevation="4dp"
+        app:title="Parameters Selection"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/Theme.AppCompat.Light" />
+
+    <TextView
+        android:id="@+id/selectSportText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/aldrich"
+        android:text="Select Sport: "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trainingToolbar" />
+
+    <TextView
+        android:id="@+id/selectDistanceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/aldrich"
+        android:text="Select Distance: "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sportSelection" />
+
+    <TextView
+        android:id="@+id/selectSwimmingStyleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/aldrich"
+        android:text="Select Swimming Style: "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editDistance"
+        tools:visibility="visible" />
+
+    <RadioGroup
+        android:id="@+id/sportSelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectSportText"
+        android:checkedButton="@id/radioRun">
+
+        <RadioButton
+            android:id="@+id/radioRun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aldrich"
+            android:text="Running"
+            android:buttonTint="@color/design_default_color_primary" />
+
+        <RadioButton
+            android:id="@+id/radioBike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aldrich"
+            android:text="Cycling"
+            android:buttonTint="@color/design_default_color_primary" />
+
+        <RadioButton
+            android:id="@+id/radioSwim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aldrich"
+            android:text="Swimming"
+            android:buttonTint="@color/design_default_color_primary" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/styleSelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectSwimmingStyleText"
+        android:checkedButton="@id/freestyle">
+
+        <RadioButton
+            android:id="@+id/freestyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aldrich"
+            android:text="Freestyle"
+            android:buttonTint="@color/design_default_color_primary" />
+
+        <RadioButton
+            android:id="@+id/butterfly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aldrich"
+            android:text="Butterfly Stroke"
+            android:buttonTint="@color/design_default_color_primary" />
+
+        <RadioButton
+            android:id="@+id/breaststroke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aldrich"
+            android:text="Breaststroke"
+            android:buttonTint="@color/design_default_color_primary" />
+
+        <RadioButton
+            android:id="@+id/backstroke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aldrich"
+            android:text="Backstroke"
+            android:buttonTint="@color/design_default_color_primary" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:fontFamily="@font/aldrich"
+        android:hint="ES: 5,40"
+        android:inputType="textPersonName"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectDistanceText" />
+
+    <Spinner
+        android:id="@+id/distanceUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/selectSwimmingStyleText"
+        app:layout_constraintStart_toEndOf="@+id/editDistance" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/startTracking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/design_default_color_primary"
+        android:fontFamily="@font/aldrich"
+        android:onClick="startTracking"
+        android:text="START TRACKING"
+        android:textSize="18sp"
+        app:icon="@drawable/ic_timer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
